@@ -8,15 +8,16 @@ export const ValContext=createContext(null)
   
 
 function ProviderContext({children}) {
-    let[v,setName]=useState('value')
-    let context={v}
-    const Changename=(p)=>{
-      setName(p)
+   
+    let[t,setT]=useState(1)
+    
+    const total=()=>{
+    setT(t+1)
     }
   return (
 
       
-    <ValContext.Provider value={{v,name:'hamza',Changename}}>
+    <ValContext.Provider value={{total,t}}>
       {children}
     </ValContext.Provider>
 

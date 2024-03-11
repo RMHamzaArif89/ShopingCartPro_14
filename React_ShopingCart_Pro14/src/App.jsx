@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import Cart from './components/ShopingCart'
-// import CartContext from './components/CartContext'
-import Test from './components/Test'
 import Nav from './components/nav'
 
 
@@ -15,8 +13,9 @@ function App() {
    
    
    <> 
+   <Nav/>
    <Cart/>
-   <Test/>
+ 
  </>
    
   )

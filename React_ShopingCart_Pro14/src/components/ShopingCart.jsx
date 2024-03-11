@@ -7,13 +7,7 @@ import './shopingcart.css'
 
 
 function Cart() {
-      let {name}=useContext(ValContext)
-   
       
-      console.log(name)
-      
-    // let[n,setName]=useState()
-    // let[img,setImg]=useState()
     let [products, setProducts] = useState([])
     let [val,setVal]=useState(0)
     let btn=useRef()
