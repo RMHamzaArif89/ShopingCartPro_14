@@ -2,11 +2,11 @@ import React, { useContext } from 'react'
 import { ValContext } from './providerContext'
 
 function Test() {
-    let {V}=useContext(ValContext)
-    console.log(V)
+    let {name}=useContext(ValContext)
+    console.log(name)
   return (
     <div>
-      {V}
+      {name}
       it test
     </div>
   )

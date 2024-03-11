@@ -8,6 +8,8 @@ import './shopingcart.css'
 
 function Cart() {
       let {name}=useContext(ValContext)
+   
+      
       console.log(name)
       
     // let[n,setName]=useState()
@@ -45,11 +47,11 @@ function Cart() {
         <>
         <div className='cart'>
          <div className="cart-con">
-         {/* {
+         {
                 products.map((item) => {
                     return <CartCard key={item.id} price={item.price} h1={item.title} img={item.thumbnail} />
                 })
-            } */}
+            }
          </div>
          <div className="cart-btn" onClick={loadFunc} ref={btn}>
                 cart More...
