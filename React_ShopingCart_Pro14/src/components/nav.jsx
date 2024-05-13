@@ -6,13 +6,13 @@ import { CiShop } from "react-icons/ci";
 import './css/nav.css'
 
 function Nav() {
-  let {t}=useContext(ValContext)
+  let {setShowCart,totalItems}=useContext(ValContext)
   return (
     <div className="nav">
-      <div className="logo">SimpleCart <CiShop style={{color:'green'}}/> </div>
-      <div className="cart-total">
+      <div className="logo" onClick={()=>{setShowCart(false )}}>SimpleCart <CiShop style={{color:'green'}}/> </div>
+      <div className="cart-total" onClick={()=>{setShowCart(true)}}>
       <BsCart4/>
-      <div className="num">{t}</div>
+      <div className="num">{totalItems}</div>
       </div>
     </div>
   )

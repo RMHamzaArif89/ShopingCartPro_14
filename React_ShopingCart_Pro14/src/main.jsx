@@ -5,10 +5,10 @@ import { ProviderContext } from './components/providerContext.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
+  <React.StrictMode>
   <ProviderContext>
     <App/>
   </ProviderContext>
     
-  // </React.StrictMode>,
+   </React.StrictMode>,
 )

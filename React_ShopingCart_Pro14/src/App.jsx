@@ -1,11 +1,15 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import Cart from './components/ShopingCart'
 import Nav from './components/nav'
+import CartPage from './components/CartPage'
+import { ValContext } from './components/providerContext'
 
 
 import './App.css'
 
 function App() {
+
+  let {showCart}=useContext(ValContext)
 
 
   return (
@@ -14,7 +18,10 @@ function App() {
    
    <> 
    <Nav/>
-   <Cart/>
+  {
+    showCart? <CartPage/> : <Cart/>
+  }
+
  
  </>
    

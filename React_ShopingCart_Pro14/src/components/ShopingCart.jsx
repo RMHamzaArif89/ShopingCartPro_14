@@ -7,11 +7,13 @@ import './shopingcart.css'
 
 
 function Cart() {
+    // let {contextData}=useContext(ValContext)
+      
       
     let [products, setProducts] = useState([])
     let [val,setVal]=useState(0)
     let btn=useRef()
-
+   
     let loadFunc=()=>{
        if(val<8){
         setVal(val+1)
@@ -27,6 +29,8 @@ function Cart() {
        
 
         setProducts(res.data.products)
+        
+        
          
 
 
@@ -35,7 +39,9 @@ function Cart() {
     useEffect(() => {
 
     getData()
-        getData()
+    
+
+        
     }, [val])
     return (
         <>
