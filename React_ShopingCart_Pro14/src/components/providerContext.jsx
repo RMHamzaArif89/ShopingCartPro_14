@@ -16,12 +16,12 @@ function ProviderContext({children}) {
     const isItemInCart = cartData.find((cartItem) => cartItem.id === id);
   
     if (isItemInCart.quantity === 1) {
-      setCartData(cartData.filter((cartItem) => cartItem.id !== id)); // if the quantity of the is 1, remove the from the cart
+      setCartData(cartData.filter((cartItem) => cartItem.id !== id));
     } else {
       setCartData(
         cartData.map((cartItem) =>
           cartItem.id === id
-            ? { ...cartItem, quantity: cartItem.quantity - 1 } // if the quantity of the is greater than 1, decrease the quantity of the item
+            ? { ...cartItem, quantity: cartItem.quantity - 1 }
             : cartItem
         )
       );
@@ -34,17 +34,29 @@ function ProviderContext({children}) {
       setCartData(
         cartData.map((cartItem) =>
           cartItem.id === id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 } // if the quantity of the is greater than 1, decrease the quantity of the item
+            ? { ...cartItem, quantity: cartItem.quantity + 1 } 
             : cartItem
         )
       );
     };
+
+
+
+    const clearCart = () => {
+      setCartItems([]);
+    };
+
+
+    const totalPrice=()=>{
+     
+        return cartData.reduce((total, item) => total + item.price * item.quantity, 0); // calculate the total price of the items in the cart
+    }
   
   
   return (
 
       
-    <ValContext.Provider value={{cartData,setCartData,setShowCart,showCart,totalItems,removeFromCart,addToCart}}>
+    <ValContext.Provider value={{cartData,setCartData,setShowCart,showCart,totalItems,removeFromCart,addToCart,totalPrice}}>
       {children}
     </ValContext.Provider>
 

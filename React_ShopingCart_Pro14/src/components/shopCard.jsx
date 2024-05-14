@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { ValContext } from './providerContext'
-import { rtrim } from 'validator'
+
 
 function  CartCard ({price, h1,img ,id}) {
    
