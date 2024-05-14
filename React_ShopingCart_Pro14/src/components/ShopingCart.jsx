@@ -27,7 +27,7 @@ function Cart() {
     async function getData() {
         const res = await axios.get(`https://dummyjson.com/products?limit=12&skip=${val*12}&select=title,thumbnail,price,id'`)
        
-
+       
         setProducts(res.data.products)
         
         
@@ -49,7 +49,7 @@ function Cart() {
          <div className="cart-con">
          {
                 products.map((item) => {
-                    return <CartCard key={item.id} price={item.price} h1={item.title} img={item.thumbnail} />
+                    return <CartCard key={item.id} id={item.id} price={item.price} h1={item.title} img={item.thumbnail} />
                 })
             }
          </div>

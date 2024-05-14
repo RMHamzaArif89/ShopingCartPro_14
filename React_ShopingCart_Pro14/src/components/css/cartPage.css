@@ -34,3 +34,23 @@
     font-weight: bold;
     font-family: serif;
 }
+
+.quantity{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: blueviolet;
+    gap: 0.6rem;
+
+}
+.quantity-btn{
+    padding: 4px 8px;
+    border-radius: 3px;
+    background: silver;
+    color: red;
+
+}
+.quantity-btn:hover{
+    cursor: pointer;
+    background: rgb(12, 85, 213);
+}
